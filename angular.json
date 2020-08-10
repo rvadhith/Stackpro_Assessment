@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MovieReviewApp"
+    }
+  },
+  "defaultProject": "MovieReviewApp",
+  "cli": {
+    "analytics": "31479a79-12cc-407c-b791-ac0e3573fac1"
+  }
 }

@@ -1,0 +1,35 @@
+.navbar {
+    background: blue;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.nav-link {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-link:hover{
+    color:black;
+}
