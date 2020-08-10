@@ -14,12 +14,25 @@ export class MoviesComponent  {
 
   constructor(private mov: GetMovieService){}
   public movieResult = {};
+  public movieResultArr = [];
+  public movieTitle = [];
+  public movieRating = [];
+  public movieOverview = [];
 
-  getMovie(movie){
-    console.log(movie.value);
-    this.mov.getTheMovie().subscribe(data => this.movieResult = data);
-    console.log(this.movieResult);
+
+  makeApiCall(movie){
+    this.mov.getTheMovie(movie.value).subscribe(data => this.movieResult = data);
+    this.movieResultArr.push(this.movieResult['results']);
+    for(var i = 0; i < this.movieResultArr[1].length; i++){
+         this.movieTitle.push(this.movieResultArr[1][i]['title']);
+         this.movieRating.push(this.movieResultArr[1][i]['vote_average']);
+         this.movieOverview.push(this.movieResultArr[1][i]['overview']);
+   }
+   console.log(this.movieTitle);
+   console.log(this.movieRating);
+   console.log(this.movieOverview);
   }
+  
   
 
 }
